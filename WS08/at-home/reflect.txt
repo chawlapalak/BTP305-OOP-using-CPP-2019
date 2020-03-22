@@ -1,0 +1,84 @@
+// Name: Palak Chawla
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 12 November 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+
+In this workshop, I used pointers to move object. I used both types of the pointers i.e.
+Raw and smart pointer. I also created a program component with quadratic complexity.
+I merged two lists using a smart pointer to make sure that memory is deallocated properly
+and if there is any exception, that is also handled. I used vectors again in this lab 
+and I am getting better with vectors as I keep using them in the labs part. I also overloaded
+the operator, to be specific += operator.
+
+I used merge function in both lab and home part, but in lab I used raw merge and in home part
+I used smart merge function. I faced some problems due to my own stupid mistake, like in a
+loop I was using j in the loop and by mistake entered i instead of j, so that was throwing
+exception for the code. Other than that, cppreference and notes helped a lot for this workshop.
+
+•	the advantage that smart pointer syntax provides. 
+Use example from your code to support your explanation.
+Smart pointer provides exception safety, collects the object or resource inside
+a container, it passes the ownership of the object when
+it enters the function, passes the ownership of the object when returning from a
+function. It owns its object, transfers ownership, cannot use copy constructor or 
+copy assignment, calls its destructor when it itself is destroyed.
+List<Product> mergeRaw(const List<Description>& desc, const List<Price>& price) {
+		List<Product> priceList;
+		// TODO: Add your code here to build a list of products
+		//         using raw pointers
+
+		 for (size_t i= 0u; i <desc.size(); ++i)
+		 {
+		     for (size_t j= 0u; j < price.size(); ++j)
+			 {
+		         if(desc[i].code == price[j].code)
+				 {
+		             Product * temp = new Product(desc[i].desc, price[j].price);
+		             temp->validate();
+		             priceList += temp;
+		             delete temp;
+					 temp = nullptr;
+		         }
+		     }
+		 }
+		return priceList;
+
+List<Product> mergeSmart(const List<Description>& desc, const List<Price>& price)
+	{
+		List<Product> priceList;
+		for (size_t i= 0u; i < desc.size(); ++i)
+                 {
+                     for (size_t j= 0u; j < price.size(); ++j)
+                         {
+                         if(desc[i].code == price[j].code) {
+                             std::unique_ptr<Product> temp (new Product(desc[i].desc, price[j].price));
+                             temp->validate();
+                             priceList += temp;
+                         }
+                     }
+                 }
+                return priceList;
+	}
+			
+			No deallocation or destruction, it is done automatically in this unlike raw pointer.
+
+
+•	the difference between raw and smart pointer syntax in your solution
+void operator+=(const T* type) : raw pointer
+void operator+=(const std::unique_ptr<T>& type)  :unique smart pointer
+
+
+Quiz #8 reflection:
+What is a deadlock?
+When two or more threads are trying to use each other to complete execution and 
+in result, are blocked forever.
+
+What is a context switch?
+When you save the state of a process so that it could be used/ executed later.
+
+What is a string literal?
+String literal is string of char which is inside the double quotation marks. It is an lvalue.

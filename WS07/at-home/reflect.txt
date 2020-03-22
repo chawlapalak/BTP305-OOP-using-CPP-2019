@@ -1,0 +1,42 @@
+
+// Name: Palak Chawla
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 10 November 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+In this workshop, lots of new things I learnt. And this was not possible without the notes, professor's help and the internet
+references for STL algorithms. Since this is new, so ofcourse there were multiple confusions and many questions that were answered
+either in class or by friends and cppreference website. I learnt about lambda expressions and using them to specify an operation
+on each value of a data set and using the algorithm library to sort data. I also used numeric library to accumulate the data. I 
+also copied the data from a file to a sequential container.
+
+I had problem with using the transform algorithm as I was getting syntax error but then I used cppreference to debug it and then 
+it was running beautifully.
+
+•	list all the STL functions that you have used in this workshop; explain your reasoning for choosing each one, and not another.
+
+std::copy   : since we could not use the loops so I used this to copy data to output stream
+std::accumulate  : since we could not use the loops so I used this to get the sum
+std::sort  :  since we could not use the loops so I used this to sort the fields
+std::transform  :since we could not use the loops so I used this to change the value of [None] to blank in the output in a single line
+std::find_if : since we could not use the loops so I used this to find the artist with a condition
+std::copy_if : since we could not use the loops so I used this to copy the songs of the artist along with the condition and the action if condition is met
+std::count_if : since we could not use the loops so I used this to count the elements and initialize the list with the counted number of elements
+
+•	present the advantages of using STL algorithms vs. implementing the functionality by yourself using loops.
+I could use the lambda and the coding length was significantely less, I could write the same functionality in almost one line of code using
+STL algorithms whereas in loops, I would have had to write long blocks of code.
+
+•	the function that sorts the collection of songs receives as a parameter the field name to use; 
+this can create errors if the client specifies an invalid field (or misspells it). 
+How would you redesign that function to prevent the client to specify an invalid string,
+ allowing any error to be detected by the compiler?
+I could use error check in that part to accommodate the function with the error in field name, using if else I can put in else,
+that if it is misspelled, then throw an exeception with the error info.
+
+
+Quiz#7 reflection:
+all correct

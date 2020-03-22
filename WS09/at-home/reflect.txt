@@ -1,0 +1,52 @@
+// Name: Palak Chawla	
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 21 November 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+In this lab, I learnt about quality code, rather than lots of numbers of code lines. I learnt how to read a set of characters
+from a file in binary mode, and how to write a set of characters to a file in binary mode, processing
+partitioned data on two threads, binding a function to its arguments.
+
+This lab was very less number of lines, but useful in long run. And I had multiple problems even injust
+those few lines because I did not pay attention that you asked for two or more threads.I 
+was about to submit the home part by using only 1 thread, then I re did with 2 threads. I used bind function
+by using cppreference website. I binded those two functions in arguments then. I also
+commented the originally provided line in the .cpp file, in ordeer to convert the text file into
+binary file as mentioned by you in the latest blackboard message.
+
+•	why was necessary to use binary files in this workshop and how did you use them
+because Binary files are only in binary digits and faster to process, read or write as compared
+to text files. text files takes time to convert them back and forth.
+
+•	why would be important to bind a function to its arguments,
+ and how was it useful in this workshop
+ We binded the function to its arguments because it restricts the function to not be much
+ versatile and forces it to use the default arguments, which maakes it easier to use and faster.
+ 
+•	the advantages of using multiple threads, 
+and how did you accomplished multi-threading in this workshop
+Threads are very fast as compared to regular process. Multi threading makes the process a lot
+faster to complete.  I created two threads with the function provided to make it faster and 
+later on joined those two threads.
+	//converter(text, key, nbytes, Cryptor());
+
+		auto ii = bind(converter, text, key, nbytes, Cryptor());
+		std::thread thr1(ii);
+		std::thread thr2
+		([this]() 
+			{ 
+				encoded = !encoded;
+			}
+		);
+		thr1.join();
+		thr2.join();
+		
+		
+		Quiz #9 Reflection:
+		
+		Q2: Ragged array:
+		
+		An array of different sizes is called ragged array.
