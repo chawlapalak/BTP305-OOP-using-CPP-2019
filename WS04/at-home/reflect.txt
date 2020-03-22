@@ -1,0 +1,44 @@
+
+// Name: Palak Chawla	
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 30 September 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+In this workshop, I learnt lots of things including some new like designing and coding composition
+and aggregation class relationships.
+I also used a class that manages an array of pointers to objects thta is dynamically allocated. I also used the member functions of the string class to 
+parse a string into tokens. I faced multiple problems in this workshop or more like a milestone.
+Some of them were :
+I could not dereference the array of pointer which took me lots of hours to figure that out,
+then I made an object of Reservation to store the dereferenced value in that and then printed it out.
+
+I also faced a segmentation fault in which I was able to get proper output in the VS but could not get 
+the output in the matrix and it stopped giving me output in the copy constructor. I searched a lot and asked many, but could not
+get proper information and you told me to make the pointer object nullptr first, in the copy and move constructor in
+the reservation and confirmation sender mile. I did that and it worked, I forgot to initialize it to nullptr. I will keep that in mind.
+
+
+
+•	the difference between the implementations of a composition and an aggregation.
+. 
+The implementation of a composition and aggregation differs in a way that composition have "has a " relationship type 
+The composer object is responsible for destroying its component object at  or before the time of its own destruction.
+Whereas, aggregation doesnot manage the creation or destruction of the objects that it uses.
+
+•	the difference between the implementations of move and copy functions in a composition and an aggregation.
+
+Special Member functions like move and copy functions added to the component class require forwarding member functions in the composer class.  
+
+Special Member functions like move and copy functions added to the aggregatee type do not require forwarding member functions in the aggregator type. 
+
+
+Quiz #3 reflection :
+
+Q1 : deep copy  : means copying all fields, and makes copies of dynamically allocated memory pointed to by the fields
+
+Q2: three types of relationships between classes:
+
+Inheritance, aggregation, composition.

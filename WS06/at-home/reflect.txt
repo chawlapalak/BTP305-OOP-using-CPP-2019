@@ -1,0 +1,48 @@
+// Name: Palak Chawla
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 1 November 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+
+This lab showed me how to use inheritance and polymorphism in coding. I used polymorphic objects using the vector
+container of the STL. I used dynamic allocated object and then I also moved that object into a container.
+I used exception handling also, by using try and catch and throw exception.
+I also learnt about range based iteration on the container's objects. I learnt how we had
+memory leak in lab and then used destructor in home part and fixed it.
+
+There were few errors that I ran into like, I was using endl in Car.cpp and then when
+there was * for booster to add, it was coming in next line. I kept messing it up in Racecar.cpp and car.cpp,
+but then I figured out, it was never supposed to be in these, Autoshop.cpp was supposed to use endl.
+
+One more problem I faced, when I was trying to get Booster from the stream,but the string was getting null each time.
+I fixed it by removing stringstream in Car.cpp, I was using get line and ss in car.cpp, after removing that my string was working fine
+and extracting everything.
+
+•	Why do you need to deallocate the dynamically allocated memory in your vector?
+Because we had a memory leak in the in lab part, we allocated the memory dynamically in the lab part and every allocated memory
+has to be deallocated before the function ends to save the leak, that's why we deallocated it.
+
+•	When building an object from the input file, different things can go wrong: the record represents an unknown type of vehicle,
+ or record contains invalid data. How can the function loadData() detect what went wrong? Can you think at another solution than the 
+one you have implemented?
+Load data catches the exceptions whenever the record represents unknown type or invalid data, 
+by that we will get to know that it is wrong and can not be used.
+
+•	In this workshop you had to use std::list<sdds::Vehicle*> and std::vector<sdds::Vehicle*> to store a collection of vehicles as pointers. 
+Could you have used std::list<sdds::Vehicle> and std::vector<sdds::Vehicle> instead? 
+No, because that would have been copy by value and whenever I had to update something in a Vehicle object in Vector and I wanted that the same
+should be reflected to list as well, so then we have to use copy pointer because it is copy by address.
+
+
+Quiz#5 reflection
+
+Q1: Three types of STL:
+
+deque, vector, forward_list
+
+Q3: Function object
+Function object is an object for which the function call operator has been overloaded. We can use function objects to perform the same operation is several different parts 
+of an application.
