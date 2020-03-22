@@ -1,0 +1,1 @@
+Forward class declarations: refers to just declaring the class not defining it. w/o definitions.

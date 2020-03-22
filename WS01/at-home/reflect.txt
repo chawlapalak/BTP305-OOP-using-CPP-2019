@@ -1,0 +1,28 @@
+// Name: Palak Chawla	
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 14 September 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+
+In Lab 1, I learnt about internal and external linkage , how to use extern keyword and static variable which lasts upto whole lifetime of the program.
+I also learnt how to use header guards to avoid the redundancy.
+Also, to use dynamic memory allocation to accept the user provided string of any length.
+I learnt how to use a variable which is defined in a different translation unit.
+
+
+•	the difference between internal and external linkage using examples from your code
+External linkage is denoted by 'extern' in declaration of the entity in a scope within another transaltion unit. Whereas, entities declared in internal linkage
+are visible to the scope of its own transalation unit but invisible outside that transalation unit.In my code, I used g_maxSize unsigned int with
+external linking which was declared in string.h and defined in string.cpp. To be noted: We dont have to write extern in the definition of the entity.
+
+•	what are static variables and how were they useful in this workshop.
+Static variables are denoted by the keyword 'static' with the variable which lasts the entire lifeitme of the program.
+I used them to initialize the counter varibale in the free helper operator function.
+
+•	the changes that you made in upgrading your String class.
+I updated str from array of 4 char including null character to a pointer to allocate dynamic memory.
+I also allocated dynamic memory in String class constructor to copy the string provided.
+

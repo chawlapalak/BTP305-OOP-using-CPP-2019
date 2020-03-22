@@ -1,0 +1,42 @@
+// Name: Palak Chawla	
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 28 September 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+
+In this workshop,I learnt about creating a template including:
+creating and coding a class template using multiple typenames, templating a class variable,
+specializing a member function of a class template.
+
+In this along with polymorphism with templates, I also learnt to use inheritance by using a parent class
+template to derive a child class template.
+
+I particulary faced problems multiple times, like there was an error in display becuase I was making a mistake in derived class display,
+I was using parent class display and was putting it in os of that display function, so I was getting errors. 
+With the help of cppreference and notes, I was able to do specialized templates too, that was also one of the confusing ones, and I received multiple errors in there.
+One of them was I initialised the initialValforSum in the declaration only, which was giving errors too. Then I understood and initialized it with specializtion.
+
+•	the reason for specializing the sum() member function.
+ The reason for specializing the sum() member function is that the sum() function we had before was only performing the sum function between numbers which it 
+assumed by default, but with the specialization not only integers but strings can be concatenated using +.
+
+•	the reason for specializing the initial value for a summation.
+The reason for specializing the initial value for a summation is that the initial values can not only be integers, it can be integers or strings also, once we
+speacialized them strings can also be used as a value.
+
+•	the reason for defining the class variable outside the class definition.
+because those class variables were static members and memory for static variables is allocated at the compile time
+ and only one memory location is available for them, so they are given the external definition .
+
+
+Quiz #2 reflection :
+
+Q: What does specialization mean?
+
+Specialization is an exception from the general behavior of the class.
+
+Q: Explain why we can't have a variable of type void?
+ We cant have a variable of type void because it is an incomplete type and due to that we even wont be able to locate memory to it, for the starters.

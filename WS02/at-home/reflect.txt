@@ -1,0 +1,37 @@
+// Name: Palak Chawla	
+// Seneca Student ID: 118834175
+// Seneca email: pchawla5@myseneca.ca
+// Date of completion: 21 September 2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my professor.
+
+In this workshop , I learned a lot of things like using move constructor and move assignment operator.
+It was interesting to see the difference between the copy constructor & copy assignment operator and move constructor & move assignment operator, the time difference is huge between them.
+Move constructor and move asignment operator are drastically fast in calculating.
+
+More new things like chrono library I used in this lab, to start the clock, stop the clock, calculate the duration between the start and the end of the events.
+I faced problem in printing the count of the duration time of the events, but then through the cpp reference you provided I figured out about the .count() function.
+
+Most of the text file was what we did last year, like copy constructor, copy assignment operator, destructor, so more brush up for the skills.
+The diffuculty was to count the number of records in a text file, I forgot to add the space as a delimiter so I faced some problem in finding the solution for that.
+But with the help of friends and cpp reference, I was able to figure out how to count them properly using getline().
+
+In this lab, I also used a lot of size_t variables, instead of other fundamental ones that I used in past.
+For the at home part, I enhanced the lab with move constructor and move assignment operator. But I got problem in my move constructor,
+It was not getting str and strStored properly when it entered in the move Constructor function. So that was giving me wrong number of records = 0;
+With your help, I was able to figure out that I had two strStored, one as a member and one as a global variable defined as 0, then there was memory leak in my
+copy assignment operator becuase I didnot deallocate the memory before doing dynamic allocation and I was not copying the non resource members in my move assignment operator.
+I also set str to nullptr in my copy and move constructors. Then it all worked fine.
+
+
+
+•	the reason for the significant time difference between the copy and move operations
+
+the difference is huge in terms of time consumption between the copy and move operations because the copy operations make a copy of an object to other space but
+the move operations moves the resources of one object to another object without making a copy or allocating memory for them.
+
+
+Quiz 1 reflection :
+ What is forward class declaration?
+Forward class declaration is declaration only without any definition.
