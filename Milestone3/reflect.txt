@@ -1,0 +1,7 @@
+This project helped me practise algorithms extensively. I also used various STL containers.
+I faced most problems in trying to have a bigger picture of all the classes' interrelation.
+Figuring out pointer assignments for the AssemblyLine was particularly challenging. 
+
+Task's fillOrder was giving me an infinte loop. For LineManager's constructor I was getting
+multiple copies of Tasks in my AssemblyLine. Turned out that I was copying tasks into this vector
+everytime a line was being read from the data file.
